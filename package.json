@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run serve:single-spa:nx",
-    "start:all": "npx concurrently \"npm start\" \"npx nx serve products\" \"npx nx serve cart\"",
+    "start:all": "npx concurrently \"npm start\" \"npx nx serve products --port 4201\" \"npx nx serve cart --port 4202\"",
     "build": "nx build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
@@ -28,7 +28,7 @@
     "nx": "nx",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points && node decorate-angular-cli.js",
     "workspace-generator": "nx workspace-generator",
-    "serve:single-spa:nx": "ng s --disable-host-check --port 4230 --deploy-url http://localhost:4230/"
+    "serve:single-spa:nx": "ng s --disable-host-check --port 4200 --deploy-url http://localhost:4200/"
   },
   "private": true,
   "dependencies": {

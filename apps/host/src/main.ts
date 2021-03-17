@@ -12,14 +12,14 @@ function loadScript(path: string) {
 registerApplication({
   name: 'microApp',
   app: () =>
-    loadScript('http://localhost:4201/main.js').then(() => window['microApp']),
+    loadScript('http://localhost:4201/main.js').then(() => window['product']),
   activeWhen: () => true,
 });
 
 registerApplication({
   name: 'microApp1',
   app: () =>
-    loadScript('http://localhost:4202/main.js').then(() => window['microApp1']),
+    loadScript('http://localhost:4202/main.js').then(() => window['cart']),
   activeWhen: () => true,
 });
 
